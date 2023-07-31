@@ -134,7 +134,7 @@ Sur le site du paiement, la signature est généré de la même façon ce qui pe
 Amount=20&TransactionID=5e89b96d-dd2e-4d14-9984-b249d4c74a85&UserEmail=a@a.com&Signature=f4dd6d1f9c6221806c6b770783afdf3b512c2bdaf509fbd05a3818be137a96592e9c9dd16ee66eefa9cda0ae287bf6eca2ec2054606d9aba5be669f4ccdb0cc4
 ```
 
-En s'intéressant plus à cette fonction, on voit que les valeurs sans tout simplement concaténés sans séparateur avec un `SIGNATURE_SALT` qu'on ne connait pas. Imaginons qu'on a les paramètres suivants :
+En s'intéressant plus à cette fonction, on voit que les valeurs sont tout simplement concaténés sans séparateur avec un `SIGNATURE_SALT` qu'on ne connait pas. Imaginons qu'on a les paramètres suivants :
 
 ```
 transaction_id: 12345-XYZ
