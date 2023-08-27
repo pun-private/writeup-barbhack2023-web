@@ -9,7 +9,7 @@
 > 
 > *Posticum is a one of these projects created by a supposed sysadmin called Bakdyr. It appears suspicious... Can you look into it ?*
 
-![preview_chall](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/31b43278-524d-4c0c-91b6-0e3be6e6f4f7)
+![preview](posticum_preview.png)
 
 Ce projet opensource permet d'afficher le résultat de certaines commandes telles que `vmstat` ou `mpstat`. Mais il y a aussi une fonctionnalité qui permet d'exécuter une commande arbitraire si on connait la valeur de `secret`.
 
@@ -26,7 +26,7 @@ Si on se fie à la logique de ce code, il faudrait donc envoyer dans les paramè
 
 En copiant le code de `app.js` dans un éditeur de texte moderne (sublime, vscode, etc), on remarque des choses étranges. 
 
-![vscode](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/1ac6fa2b-851a-428d-a691-4e80683b65bb)
+![vscode](posticum_vscode.png)
 
 Il y a des caractères qu'on pense être des espaces et des points d'exclamation qui ne le sont pas :
 * `debugㅤ` : cette variable contient en réalité le caractère unicode `U+3164` (https://unicode-explorer.com/c/3164) qui ressemble à un espace
