@@ -9,7 +9,7 @@
 > 
 > *Review the source code of this project and help the community by finding a critical vulnerability.*
 
-![Pasted image 20230730132345](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/972e4ff5-79dd-486c-9ae6-5af16d103787)
+![preview](onerpc_preview.png)
 
 **One\RPC** est un projet Open Source visant à simplifier et accélérer le développement des API. L'idée est qu'il y ait un unique endpoint POST où l'on envoie un seul JSON contenant trois champs :
 
@@ -107,7 +107,7 @@ check_forbidden_func($json->func);
 
 Il faut trouver une fonction php native qui commence par `register_`. Pour cela, il suffit d'aller sur la documentation PHP et d'en trouver :
 
-![Pasted image 20230730135444](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/a8b1838a-7312-4d36-ae87-a4fb55439a67)
+![docphp](onerpc_docphp.png)
 
 https://www.php.net/manual/en/function.register-shutdown-function => permet d'appeler une fonction à la fin d'exécution du script
 
