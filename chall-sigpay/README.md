@@ -17,9 +17,9 @@ Sur ce challenge, on a deux sites distincts :
 
 Le but est d'acheter le NFT à 42 000 euros.
 
-![donate retro nft_40080_ (1)](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/4565e63a-fcf7-4f3a-8f22-09097bb410e4)
+![preview](sigpay_preview.png)
 
-![payment-gateway retro nft easy4pay money_40080__Amount=20 TransactionID=1089d466-8d27-4be5-960d-10603d264401 UserEmail=a@a com Signature=0bf07955d8e0475ac81728abe697c2e87d3ed57280265c1617aa21c6f9ad58c04361d03eef7ef](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/47986731-672a-4531-9348-d743f59cd713)
+![preview](sigpay_payment.png)
 
 Lorsqu'on ajoute au panier un NFT du site principal, une signature est générée et envoyée au site de paiement. Si on altère n'importe quel paramètre, on a le message :
 
@@ -166,4 +166,4 @@ http://payment-gateway.retro.nft.easy4pay.money:40080/?Amount=4&TransactionID=92
 
 On paie et on est redirigé vers le flag =)
 
-![Pasted image 20230731113652](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/a947bf81-9f6d-49aa-87a1-ebfa4f036d7c)
+![flag](sigpay_flag.png)
