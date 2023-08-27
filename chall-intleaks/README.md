@@ -9,7 +9,7 @@
 > 
 > *Can you get your hands on the next leak before it becomes public ?*
 
-![challs lab algosecu re_40005_](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/2e3cd01c-bf8f-48a1-9be3-342115ecf575)
+![preview](intleaks_preview.png)
 
 L'objectif du challenge est de récupérer la fameuse fuite qui devrait sortir prochainement. Or, pour déjà lire les fuites précédentes, il faut accepter le "user agreement" qui génère un jwt stocké dans le cookie :
 
@@ -74,7 +74,7 @@ On teste en ajoutant un `#` avant le `.disclosed` pour avoir `/#.disclosed` et a
 http://<chall>/api/document?location=/%23.disclosed
 ```
 
-![Pasted image 20230726084352](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/4207c9a9-53e9-4763-8254-8db3ce807e31)
+![listing](intleaks_listing_directory.png)
 
 On arrive bien sur la racine du serveur web et par chance y a le directory listing. Le premier dossier `api_0aca881eb4_prod_v42_src/` contient d'ailleurs le code source de l'appli.
 
@@ -96,7 +96,7 @@ On commence par récupérer le code source de app.py
 /api/document?location=/api_0aca881eb4_prod_v42_src/app.py%23.disclosed
 ```
 
-![Pasted image 20230726084921](https://github.com/pun-private/writeup-barbhack2023-web/assets/27222105/548b952d-ee6a-4ca0-94c6-3e3c4af8a259)
+![src_code](intleaks_src_code.png)
 
 Le problème est que dans le pdf, le code n'est pas indenté... Soit on le fait à la mano en guessant un peu, ou on remarque la présence du paramètre `raw` qui retourne le texte brut sans générer de PDF !
 
